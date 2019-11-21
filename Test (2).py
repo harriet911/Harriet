@@ -5,8 +5,9 @@ def downpic(filep):
     web = request.urlopen( filep)
     jpg=web.read()
     print("已请求"+filep)
+    path=input("please input directory")
     try:
-        File = open("G:\\Demo1.jpg", "wb")
+        File = open(path, "wb")
         File.write(jpg)
         File.close
         print("已保存图片")
